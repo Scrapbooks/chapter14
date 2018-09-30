@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chapter 14 Practice</title>
+  <meta charset="utf-8">
+<style>
+input { display: block;
+        margin-bottom: 1em;
+        }
+label { float: left;
+        width: 5em;
+		padding-right: 1em;
+        text-align: right; 
+}
+#submit { margin-left: 7em; }		
+</style>
+<script>
+function validateForm() {
+if (document.forms[0].userName.value == "" ) {
+    alert("Name field is required.");
+    return false;
+} // end if
+if (document.forms[0].userEmail.value == "") {
+    alert("Please enter a valid email.");
+    return false;
+	}
+ // end if
+alert("Name and email are valid.");
+return true;
+} // end function validateForm
+</script>
+
+</head>
+<body>
+<h1>JavaScript Form Practice</h1>
+<form method="post"
+      action="http://markmurtha.com/csis128/readform.asp"
+      onsubmit="return validateForm();">
+<label for="userName">Name:</label>
+<input type="text" name="userName" id="userName">
+<label for="userEmail">Email:</label>
+<input type="text" name="userEmail" id="userEmail">
+<input type="submit" value="Sign Up Now" id="submit">
+</form>
+</body>
+</html>
